@@ -69,11 +69,11 @@ public class TicTacToe_II{
     
     board[row][col] = 'x';
     
-   //turn 4
-
     drawBoard();
     
-     System.out.println("Which row?"); 
+   //turn 4
+
+    System.out.println("Which row?"); 
     
     row = input.nextInt();
   
@@ -87,7 +87,7 @@ public class TicTacToe_II{
     
      //turn 5
     
-     System.out.println("Which row?"); 
+    System.out.println("Which row?"); 
     
     row = input.nextInt();
 
@@ -154,6 +154,10 @@ public class TicTacToe_II{
     board[row][col] = 'x';
     
     drawBoard();
+    
+    if(check_winner()){
+      System.out.println("Player X Wins!");
+    }
 
     
   }
@@ -172,32 +176,69 @@ public class TicTacToe_II{
   public boolean check_winner(){
     boolean x_wins = false;
 
-       if (board[0][0] == 'x' && board[0][1] == 'x' && x == 02)
+       if (board[0][0] == 'x' && board[0][1] == 'x' && board[0][2] == 'x')
    x_wins = true;
 
-   else if (x == 10 && x == 11 && x == 12)
+   else if (board[1][0] == 'x' && board[1][1] == 'x' && board[1][2] == 'x')
    x_wins = true;
 
-   else if (x == 20 && x == 21 && x == 22)
+   else if (board[2][0] == 'x' && board[2][1] == 'x' && board[2][2] == 'x')
    x_wins = true;
 
-    else if (x == 00 && x == 10 && x == 20)
+   else if (board[0][0] == 'x' && board[1][0] == 'x' && board[2][0] == 'x')
    x_wins = true;
 
-    else if (x == 01 && x == 11 && x == 21)
+   else if (board[0][1] == 'x' && board[1][1] == 'x' && board[2][1] == 'x')
    x_wins = true;
 
-    else if (x == 02 && x == 12 && x == 22)
+   else if (board[0][2] == 'x' && board[1][2] == 'x' && board[2][2] == 'x')
    x_wins = true;
 
-    else if (x == 02 && x == 11 && x == 22)
+   else if (board[0][2] == 'x' && board[1][1] == 'x' && board[2][2] == 'x')
     x_wins = true;
 
-    else if (x == 20 && x == 11 && x == 02)
+   else if (board[2][0] == 'x' && board[1][1] == 'x'  && board[0][2] == 'x' )
+   x_wins = true;
+
+    return x_wins;
+   
+     
+    
+    /*
+     public boolean check_winner(){
+    boolean x_wins = false;
+
+       if (board[0][0] == 'x' && board[0][1] == 'x' && board[0][2] == 'x')
+   x_wins = true;
+
+   else if (board[1][0] == 'x' && board[1][1] == 'x' && board[1][2] == 'x')
+   x_wins = true;
+
+   else if (board[2][0] == 'x' && board[2][1] == 'x' && board[2][2] == 'x')
+   x_wins = true;
+
+   else if (board[0][0] == 'x' && board[1][0] == 'x' && board[2][0] == 'x')
+   x_wins = true;
+
+   else if (board[0][1] == 'x' && board[1][1] == 'x' && board[2][1] == 'x')
+   x_wins = true;
+
+   else if (board[0][2] == 'x' && board[1][2] == 'x' && board[2][2] == 'x')
+   x_wins = true;
+
+   else if (board[0][2] == 'x' && board[1][1] == 'x' && board[2][2] == 'x')
+    x_wins = true;
+
+   else if (board[2][0] == 'x' && board[1][1] == 'x'  && board[0][2] == 'x' )
    x_wins = true;
 
     return x_wins
    
+      if x_wins = true;
+      return System.out.println("Player X Wins!");
+      
+      */
+      
   }
   
   
