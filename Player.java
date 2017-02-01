@@ -36,10 +36,10 @@ private String name;
     
     
      //getters and setters
-   public String getname(){
+   public String getName(){
     return name;
   }
-  public void setname(String newName){
+  public void setName(String newName){
     name = newName;
   }
   
@@ -52,5 +52,4 @@ private String name;
   }
      
 }
-  
   

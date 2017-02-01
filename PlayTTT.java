@@ -1,5 +1,3 @@
-  import java.util.Scanner;
-
 public class PlayTTT{
 
 
@@ -60,5 +58,3 @@ public static void main(String[] args){
     board.drawBoard();
   }
 }
-    
-    
