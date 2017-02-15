@@ -42,7 +42,7 @@ public static void main(String[] args){
     System.out.println ( "                                                                                                    ");
     System.out.println ( "     2. player 1 goes first picking a place to put their x                                          ");
     System.out.println ( "                                                                                                    ");
-    System.out.println ( "     3. player 2 goes fsecond picking a place to put their o                                        ");
+    System.out.println ( "     3. player 2 goes second picking a place to put their o                                        ");
     System.out.println ( "                                                                                                    ");
     System.out.println ( "     4. This process continues until player 1 or 2 gets three of their variebules in a straight line");
     System.out.println ( "                                                                                                    ");
@@ -73,7 +73,7 @@ public static void main(String[] args){
     Board board = new Board();
     
 
-    while(!TTTChecker()){
+    while(TTTChecker()){
       System.out.println("Player " + player1.getName() + ", give row and then column: ");
       int row = in.nextInt();
       int col = in.nextInt();
@@ -81,9 +81,91 @@ public static void main(String[] args){
       board.makeMove(player1.getSymbol(), row, col);
         board.drawBoard();
 
+      
+      
+      
       System.out.println("Player " + player2.getName() + ", give row and then column: ");
       row = in.nextInt();
       col = in.nextInt();
+      
+       board.makeMove(player2.getSymbol(), row, col);
+        board.drawBoard();
+      
+      
+      
+      
+       System.out.println("Player " + player1.getName() + ", give row and then column: ");
+       row = in.nextInt();
+       col = in.nextInt();
+      
+          board.makeMove(player1.getSymbol(), row, col);
+            board.drawBoard();
+      
+      
+      
+      
+      
+        System.out.println("Player " + player2.getName() + ", give row and then column: ");
+      row = in.nextInt();
+      col = in.nextInt();
+      
+       board.makeMove(player2.getSymbol(), row, col);
+        board.drawBoard();
+      
+      
+      
+      
+        System.out.println("Player " + player1.getName() + ", give row and then column: ");
+       row = in.nextInt();
+       col = in.nextInt();
+      
+          board.makeMove(player1.getSymbol(), row, col);
+            board.drawBoard();
+
+      
+      
+      
+      System.out.println("Player " + player2.getName() + ", give row and then column: ");
+      row = in.nextInt();
+      col = in.nextInt();
+      
+       board.makeMove(player2.getSymbol(), row, col);
+        board.drawBoard();
+      
+      
+      
+      
+      
+      
+        System.out.println("Player " + player1.getName() + ", give row and then column: ");
+       row = in.nextInt();
+       col = in.nextInt();
+      
+          board.makeMove(player1.getSymbol(), row, col);
+            board.drawBoard();
+      
+      
+      
+      
+      
+        System.out.println("Player " + player2.getName() + ", give row and then column: ");
+      row = in.nextInt();
+      col = in.nextInt();
+      
+       board.makeMove(player2.getSymbol(), row, col);
+        board.drawBoard();
+      
+      
+      
+      
+      
+      
+        System.out.println("Player " + player1.getName() + ", give row and then column: ");
+       row = in.nextInt();
+       col = in.nextInt();
+      
+          board.makeMove(player1.getSymbol(), row, col);
+            board.drawBoard();
     }
    
     }
