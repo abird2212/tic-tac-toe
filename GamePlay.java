@@ -37,10 +37,10 @@ public GamePlay(){
     
     
   System.out.println ("                                                ");
-  System.out.println ("                             _______________    ");
-  System.out.println ("                             | How to play |    ");
-  System.out.println ("                             | Tic Tac Toe |    ");
-  System.out.println ("                              -------------     ");
+  System.out.println ("                              ________________   ");
+  System.out.println ("                             /   How to play  \   ");
+  System.out.println ("                             \  Tic Tac Toe™ /   ");
+  System.out.println ("                              ----------------   ");
   System.out.println ("                                                     ");
   System.out.println ("      1. Give your names. (player 1 is X and 2 is O) ");
   System.out.println ("                                                     ");
@@ -77,25 +77,29 @@ public GamePlay(){
     System.out.println ( "     4. This process continues until player 1 or 2 gets three of their variables in a straight line");
     System.out.println ( "                                                                                                    ");
     System.out.println ( "     5. Things to know:                                                                             ");
-    System.out.println ( "   - Do not enter the same #'s as the other player!                                                 ");
+    System.out.println ( "   - Do not enter the same cordnates as the other player!                                                 ");
     System.out.println ( "   - If someone enters something other than a # the game will turn off!                             ");
     System.out.println ( "   - This is a work in progress game!                                                               ");
     System.out.println ( "                                                                                                    ");
     System.out.println ( "                                                                                                    ");
   
     System.out.println ( "                                         ");
+    System.out.println ( "                                         ");
     System.out.println ( "         0       1       2               ");
     System.out.println ( "         |       |       |               ");
-    System.out.println ( "         v       v       v               ");
-    System.out.println ( "                                         ");
+    System.out.println ( "         v       v       v       enter  |");
+    System.out.println ( "                                 these  |");
+    System.out.println ( "             |        |          first  v");
     System.out.println ( "             |        |                  ");
     System.out.println ( "         00  |   01   | 02       <----- 0");
-    System.out.println ( "       ----------------------            ");
+    System.out.println ( "    ---------------------------          ");
     System.out.println ( "             |        |                  ");
     System.out.println ( "         10  |   11   | 12       <----- 1");
-    System.out.println ( "       ----------------------            ");
+    System.out.println ( "             |        |                  ");
+    System.out.println ( "    ---------------------------          ");
     System.out.println ( "             |        |                  ");
     System.out.println ( "         20  |   21   | 22       <----- 2");
+    System.out.println ( "             |        |                  ");
     System.out.println ( "                                         ");
     System.out.println ( "                                         ");
     
