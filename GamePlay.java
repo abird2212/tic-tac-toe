@@ -4,8 +4,8 @@ public class GamePlay{
 
   
   
-  private Player player1 = new Player('x', false, "");
-  private Player player2 = new Player('x', false, "");
+  private Player player1 = new Player('x', false, "", true);
+  private Player player2 = new Player('o', false, "", false);
   
   
 public GamePlay(){
@@ -20,10 +20,23 @@ public GamePlay(){
     return player2;
   }
   
+  public Player playerTurn(){
+    if(player1.getIsTurn()){
+      player1.setIsTurn(false);
+      player2.setIsTurn(true);
+      return player1;
+    }
+    else{
+      player2.setIsTurn(false);
+      player1.setIsTurn(true);
+      return player2;
+    }
+  }
+  
   public void introSplash(){
     
     
-      System.out.println ("                                                ");
+  System.out.println ("                                                ");
   System.out.println ("                             _______________    ");
   System.out.println ("                             | How to play |    ");
   System.out.println ("                             | Tic Tac Toe |    ");

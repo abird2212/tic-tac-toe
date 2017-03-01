@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Board{
   
   
@@ -31,26 +33,39 @@ public class Board{
   // <----------> side to side:
   
   public boolean TTTChecker(){
-    if((board[0][0] == board[0][1]) && (board[0][1] == board[0][2]) && board[0][0] !=' ')
-      return true;
-    else if ((board[1][0] == board[1][1]) && (board[1][1] == board[1][2]) && board[1][0] !=' ')
-      return true;
-    else if((board[2][0] == board[2][1]) && (board[2][1] == board[2][2]) && board[2][0] !=' ')
-      return true;
-    else if((board[0][0] == board[1][0]) && (board[0][0] == board[2][0]) && board[0][0] !=' ')
-      return true;    
-    else if((board[0][1] == board[1][1]) && (board[1][1] == board[2][1]) && board[0][1] !=' ')
-      return true;    
-    else if((board[0][2] == board[1][2]) && (board[0][2] == board[2][2]) && board[0][2] !=' ')
-      return true;  
-    else if((board[0][0] == board[1][1]) && (board[0][0] == board[2][2]) && board[0][0] !=' ')
-      return true;  
-    else if((board[0][2] == board[1][1]) && (board[0][2] == board[2][0]) && board[0][2] !=' ')
-      return true;     
-    else
-      return false;
     
+    boolean winner = false;
+    
+    if((board[0][0] == board[0][1]) && (board[0][1] == board[0][2]) && board[0][0] !=' ')
+      winner = true;
+    else if ((board[1][0] == board[1][1]) && (board[1][1] == board[1][2]) && board[1][0] !=' ')
+      winner = true;
+    else if((board[2][0] == board[2][1]) && (board[2][1] == board[2][2]) && board[2][0] !=' ')
+     winner = true;
+    else if((board[0][0] == board[1][0]) && (board[0][0] == board[2][0]) && board[0][0] !=' ')
+      winner = true;   
+    else if((board[0][1] == board[1][1]) && (board[1][1] == board[2][1]) && board[0][1] !=' ')
+     winner = true;    
+    else if((board[0][2] == board[1][2]) && (board[0][2] == board[2][2]) && board[0][2] !=' ')
+      winner = true; 
+    else if((board[0][0] == board[1][1]) && (board[0][0] == board[2][2]) && board[0][0] !=' ')
+      winner = true; 
+    else if((board[0][2] == board[1][1]) && (board[0][2] == board[2][0]) && board[0][2] !=' ')
+      winner = true;    
+    else
+      winner = false;
+    
+      return winner;
     }
+  
+  public void playerMove(Scanner in, Player player){
+          System.out.println("Player " + player.getName() + ", give row and then column: ");
+      int row = in.nextInt();
+      int col = in.nextInt();
+
+      this.makeMove(player.getSymbol(), row, col);
+        this.drawBoard();
+  }
 
 }
   

@@ -15,27 +15,18 @@ public static void main(String[] args){
     Scanner in = new Scanner(System.in);
 
     while(!board.TTTChecker()){
-      System.out.println("Player " + gameplay.getplayer1().getName() + ", give row and then column: ");
-      int row = in.nextInt();
-      int col = in.nextInt();
-
-      board.makeMove(gameplay.getplayer1().getSymbol(), row, col);
-        board.drawBoard();
-
-      
-      
-      
-      System.out.println("Player " + gameplay.getplayer2().getName() + ", give row and then column: ");
-      row = in.nextInt();
-      col = in.nextInt();
-      
-       board.makeMove(gameplay.getplayer2().getSymbol(), row, col);
-        board.drawBoard();
-      
-      
-    
+            
+      board.playerMove(in, gameplay.playerTurn());
    
     }
+  
+    //if there is a winner then check who won
+    if(!gameplay.getplayer1().getIsTurn()){
+      System.out.println(gameplay.getplayer1().getName() + " won!!!!");
+    }
+    else{
+       System.out.println(gameplay.getplayer2().getName() + " won!!!!");
+     }
   }
 }
 
