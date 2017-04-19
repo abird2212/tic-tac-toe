@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class GamePlay{
 
   
-  
+  // the code bellow makes sure player 1 is x and p2 is o
   private Player player1 = new Player('x', false, "", true);
   private Player player2 = new Player('o', false, "", false);
   
@@ -11,15 +11,15 @@ public class GamePlay{
 public GamePlay(){
 
 }
-
+// the code bellow is p1
   public Player getplayer1(){
     return player1;
   }
-  
+  // the code bellow is p2
    public Player getplayer2(){
     return player2;
   }
-  
+   // the code bellow is the turn system that makes sure that a player waits for their turn and also that they get one.
   public Player playerTurn(){
     if(player1.getIsTurn()){
       player1.setIsTurn(false);
@@ -35,17 +35,18 @@ public GamePlay(){
   
   public void introSplash(){
     
+    // the code bellow is the menu/title players see when they run the game. 
     
   System.out.println ("                                                ");
   System.out.println ("                              ________________   ");
-  System.out.println ("                             /   How to play  \   ");
-  System.out.println ("                             \  Tic Tac Toe™ /   ");
+  System.out.println ("                              |   How to play|   ");
+  System.out.println ("                              | Tic Tac Toe  |   ");
   System.out.println ("                              ----------------   ");
   System.out.println ("                                                     ");
   System.out.println ("      1. Give your names. (player 1 is X and 2 is O) ");
   System.out.println ("                                                     ");
      
-  
+  // the code bellow allows the players to give their names so they can see the name of the winner at the end.
   
   Scanner in = new Scanner(System.in);
   
@@ -68,7 +69,7 @@ public GamePlay(){
     // player player2 = new Player('o', false, nameP2);
     
   
-
+ // the code bellow is the intructions the players see before they play 
     System.out.println ( "                                                                                                    ");
     System.out.println ( "     2. player 1 goes first picking a place to put their x                                          ");
     System.out.println ( "                                                                                                    ");
@@ -82,7 +83,7 @@ public GamePlay(){
     System.out.println ( "   - This is a work in progress game!                                                               ");
     System.out.println ( "                                                                                                    ");
     System.out.println ( "                                                                                                    ");
-  
+   // the code bellow is the chart that shows how ti place your letter as a player.
     System.out.println ( "                                         ");
     System.out.println ( "                                         ");
     System.out.println ( "         0       1       2               ");

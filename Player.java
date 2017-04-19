@@ -1,6 +1,6 @@
 public class Player{
 
- 
+    // the code bellow is all about the players turns and win.
 private char symbol;
 private boolean isWinner;
 private String name;
@@ -9,7 +9,7 @@ private boolean isTurn;
    public Player(){
 
   }
-  
+     // the code bellow controls the turns.
    public Player(char newSymbol, boolean newIsWinner, String newName, boolean newIsTurn){
   
     symbol = newSymbol;
@@ -36,7 +36,7 @@ private boolean isTurn;
     symbol = newSymbol;
   }
   
-  
+     // the code bellow outputs the winner
    //getters and setters
    public boolean getisWinner(){
     return isWinner;

@@ -16,7 +16,7 @@ public class Board{
     board[row][col] = symbol;
   }
   
-
+// the code below draws the board and shows where the person has gone.
   public void drawBoard(){
     
     System.out.println("                                                                             ");
@@ -31,7 +31,7 @@ public class Board{
 
   
   // <----------> side to side:
-  
+  // the code bellow tests the board for a winner by checking every way they could possibly win.
   public boolean TTTChecker(){
     
     boolean winner = false;
@@ -57,7 +57,7 @@ public class Board{
     
       return winner;
     }
-  
+  // the code bellow gives the players turns allowing them to enter the location the want.
   public void playerMove(Scanner in, Player player){
           System.out.println("Player " + player.getName() + ", give row and then column: ");
       int row = in.nextInt();
